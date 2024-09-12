@@ -1,0 +1,553 @@
+* 
+{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Estilo padrão para PC */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('../img/Fundo.jpeg');
+  background-size: cover; /* Faz a imagem cobrir todo o fundo da página */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-attachment: fixed; /* Faz a imagem de fundo ficar fixa */
+}
+
+/* Estilo para tablets */
+@media only screen and (max-width: 768px) {
+  body {
+      background-image: url('../img/Fundo.jpeg');
+  }
+}
+
+/* Estilo para dispositivos móveis */
+@media only screen and (max-width: 480px) {
+  body {
+      background-image: url('../img/Fundo.jpeg');
+  }
+} 
+
+header, footer {
+  background-color: #343a40; /* Cor de fundo do header e footer */
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+.nav-link {
+  color: white !important; /* Altera a cor das letras */
+  font-size: 1.2rem; /* Altera o tamanho da fonte */
+}
+
+.nav-link:hover {
+  color: #ddd !important; /* Altera a cor das letras ao passar o mouse */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn i {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #343a40;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #495057;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* Ajuste para considerar altura do header e footer */
+  padding: 20px;
+}
+
+.auth-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.auth-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Rodapé fixo na parte inferior */
+footer {
+
+    background: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.traco {
+  color: #fafafa;
+  height: 50px;
+}
+
+.container_jogos {
+  background-color:  #34327d; /* Tom de azul claro */
+  font-family: Arial, sans-serif;
+  color: #000000; /* Letras em preto */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 450px;
+  margin: 40px auto; /* Adiciona margem superior para afastar do rodapé */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container_jogos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* Letras em branco */
+}
+
+.container_jogos p {
+  text-align: center;
+  color: #fff; /* Letras em branco */
+  margin-bottom: 20px;
+}
+
+.container_jogos h1 {
+  text-align: center;
+  color: #fff; /* Letras em branco */
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Distribui os botões de forma uniforme */
+}
+
+.container_jogos button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}
+
+.container_jogos label {
+  display: block;
+  margin-bottom: 2px; /* Diminui o espaço entre os labels e os inputs */
+  font-weight: bold;
+}
+
+.container_jogos input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container_jogos button.submit-button {
+  background-color: #9589df; /* Tom de azul mais escuro */
+}
+
+.container_jogos button.submit-button:hover {
+  background-color: #4c4896; /* Tom de azul ainda mais escuro */
+  transform: scale(1.05);
+}
+
+.container_jogos button.cancel-button {
+  background-color: #6c757d; /* Tom de cinza */
+}
+
+.container_jogos button.cancel-button:hover {
+  background-color: #5a6268; /* Tom de cinza mais escuro */
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+  background-color: #34327d; /* Tom de azul claro */
+}
+
+.avatar-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000; /* Borda preta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.avatar-container img:hover {
+  transform: scale(1.1);
+}
+
+.avatar-container .status-indicator {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #34327d; /* Tom de azul claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.profile-content:hover {
+  background-color: #2e2c6e; /* Tom de azul mais escuro ao passar o mouse */
+}
+
+.profile-info-container {
+  margin-left: 20px;
+  background-color: #fff; /* Sub-container branco */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info-container h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-info-container p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+#profile_picture {
+  width: auto;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 500px; /* Defina a altura desejada para suas imagens */
+  object-fit: cover; /* Garante que a imagem cubra o contêiner, mantendo a proporção */
+}
+
+
+#foto {
+  display: none;
+}
+
+.btn-photo {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto */
+  padding: 4px; /* Reduz ainda mais o espaço interno */
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  border-radius: 5px; /* Arredonda os cantos */
+  background-color: #f0f0f0; /* Define uma cor de fundo */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Adiciona transição mais lenta para a mudança de cor */
+  margin-bottom: 10px; /* Adiciona espaço entre o botão e o próximo elemento */
+}
+
+.btn-photo:hover {
+  background-color: #8861e0; /* Cor de fundo roxa ao passar o mouse */
+  color: #ffffff; /* Cor do texto branca ao passar o mouse */
+}
+
+/* Estilo para o container do botão de upload */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre os elementos */
+}
+
+/* Estilo do rótulo para o upload de arquivo */
+.file-upload {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 100%; /* Ajusta a largura do botão para preencher o container */
+}
+
+/* Ocultar o input real de arquivo */
+.file-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Estilo do botão de upload de arquivo */
+.file-upload span {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px; /* Ajuste do padding para criar um botão mais longo */
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1; /* Ajuste a altura da linha para centralizar o texto verticalmente */
+  font-weight: normal; /* Remove o negrito do texto */
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 100%; /* Faz o botão preencher o container, se desejado */
+}
+
+.file-upload span:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+#wide-btn {
+  width: 100%; /* Largura padrão para dispositivos menores */
+    max-width: 400px; /* Largura máxima para dispositivos maiores */
+    padding: 10px; /* Adiciona padding para melhor usabilidade em dispositivos móveis */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura total */
+}
+
+/* Cartão de produto */
+.card {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  background-color: #8861e0;
+  color: #fafafa;
+  margin: 10px; /* Adiciona um espaço pequeno ao redor de cada card */
+}
+
+.card-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff0000; /* Azul para destacar, ajuste conforme necessário */
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-bottom-right-radius: 8px; /* Arredondamento na parte inferior direita */
+  z-index: 1; /* Garante que o tipo fique sobre a imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card_mobile {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+h2 {
+  color: #fafafa;
+  text-align: center; /* Centraliza o texto */
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: left;
+  align-items: left;
+}
+
+
+.card-new {
+  background-color: #0bf117; /* Amarelo para destacar "Novidades" */
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  margin-left: 10px;
+  padding: 3px 6px;
+}
+
+.card-img-top {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.card-body {
+  padding: 20px; /* Manter o padding para o conteúdo interno */
+  padding-top: 40px; /* Ajuste para que o conteúdo não fique sobre o tipo */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #ffffff;
+  line-height: 1.5;
+  text-align: justify; /* Alinha o texto de forma justificada */
+}
+.card-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745; /* Verde para destacar o preço, ajuste conforme necessário */
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+
+
